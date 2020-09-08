@@ -1,0 +1,17 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": ["XX", "X#", " #"],
+    "key": {
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "type": "forge:ore_dict",
+            "ore": "ingotNaquadahAlloy"
+        }
+    },
+    "result": {
+        "item": "moresg:naquadah_axe",
+        "count": 1
+    }
+}

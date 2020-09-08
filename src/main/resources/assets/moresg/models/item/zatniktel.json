@@ -1,0 +1,18 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "moresg:items/zatniktel"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-17, -84, -44],
+			"translation": [0.75, 2.25, 2.5],
+			"scale": [0.52, 0.53, 0.52]
+		},
+		"firstperson_righthand": {
+			"rotation": [-35, -101, 0],
+			"translation": [1.5, 3.5, 0]
+		}
+	}
+}
