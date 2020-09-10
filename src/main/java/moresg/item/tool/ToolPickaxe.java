@@ -1,5 +1,7 @@
 package moresg.item.tool;
 
+import moresg.MoreSG;
+import moresg.init.InitItems;
 import net.minecraft.item.ItemPickaxe;
 
 public class ToolPickaxe extends ItemPickaxe {
@@ -7,5 +9,7 @@ public class ToolPickaxe extends ItemPickaxe {
         super(material);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
+        this.setCreativeTab(MoreSG.creativeTabs);
+        InitItems.registeredItem.add(this);
     }
 }
