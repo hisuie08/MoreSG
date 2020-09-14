@@ -10,6 +10,6 @@ public class ToolSword extends ItemSword {
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         this.setCreativeTab(MoreSG.creativeTabs);
-        InitItems.registeredItem.add(this);
+        InitItems.registeredItems.add(this);
     }
 }

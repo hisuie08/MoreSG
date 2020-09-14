@@ -9,7 +9,7 @@ public class ItemBase extends Item {
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(MoreSG.creativeTabs);
-        InitItems.registeredItem.add(this);
+        InitItems.registeredItems.add(this);
     }
 
 }

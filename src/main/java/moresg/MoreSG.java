@@ -26,7 +26,7 @@ public class MoreSG
 
     public static final String CLIENT_PROXY = "moresg.proxy.ClientProxy";
     public static final String SERVER_PROXY = "moresg.proxy.ServerProxy";
-    public static final CreativeTabs creativeTabs = new CreativeTabs("moresg:MoreSG") {
+    public static final CreativeTabs creativeTabs = new CreativeTabs("MoreSG") {
         @Override
         public ItemStack getTabIconItem() {
             return new ItemStack(NAQUADAH_AXE);

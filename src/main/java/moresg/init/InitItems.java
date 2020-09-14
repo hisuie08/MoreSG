@@ -22,7 +22,7 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitItems {
-    public static List<Item> registeredItem = new ArrayList<Item>();
+    public static List<Item> registeredItems = new ArrayList<Item>();
     public static Item NAQUADAH_AXE;
     public static Item NAQUADAH_HOE;
     public static Item NAQUADAH_PICKAXE;
@@ -59,12 +59,12 @@ public class InitItems {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event){
-        event.getRegistry().registerAll(registeredItem.toArray(new Item[0]));
+        event.getRegistry().registerAll(registeredItems.toArray(new Item[0]));
     }
 
     @SubscribeEvent
     public static void registerRenderers(ModelRegistryEvent event){
-        registeredItem.forEach(InitItems::registerRenderer);
+        registeredItems.forEach(InitItems::registerRenderer);
     }
 
     private static void registerRenderer(Item item){

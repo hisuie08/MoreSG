@@ -11,7 +11,7 @@ public class ToolAxe extends ItemAxe{
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(MoreSG.creativeTabs);
-        InitItems.registeredItem.add(this);
+        InitItems.registeredItems.add(this);
 
     }
 

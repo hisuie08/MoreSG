@@ -1,0 +1,14 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": ["X X", "X X"],
+    "key": {
+        "X": {
+            "type": "forge:ore_dict",
+            "ore": "ingotNaquadahAlloy"
+        }
+    },
+    "result": {
+        "item": "moresg:jaffa_boots",
+        "count": 1
+    }
+}
