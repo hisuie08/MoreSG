@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-import static moresg.init.InitItems.NAQUADAH_AXE;
 
 
 @Mod(modid = MoreSG.MODID, name = MoreSG.NAME, version = MoreSG.VERSION)
@@ -26,12 +25,13 @@ public class MoreSG
 
     public static final String CLIENT_PROXY = "moresg.proxy.ClientProxy";
     public static final String SERVER_PROXY = "moresg.proxy.ServerProxy";
-    public static final CreativeTabs creativeTabs = new CreativeTabs("MoreSG") {
+    public static final CreativeTabs creativeTabs = new CreativeTabs("moresg:moresg") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(NAQUADAH_AXE);
+            return new ItemStack(InitItems.NAQUADAH_AXE);
         }
     };
+
 
     @Mod.Instance
     public static MoreSG instance;
