@@ -2,6 +2,7 @@ package moresg.init;
 
 import moresg.MoreSG;
 import moresg.item.ArmorBase;
+import moresg.item.StuffGun;
 import moresg.item.Zatniktel;
 import moresg.item.tool.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -29,6 +30,7 @@ public class InitItems {
     public static Item NAQUADAH_SWORD;
     public static Item NAQUADAH_SPADE;
     public static Item ZATNIKTEL;
+    public static Item STUFFGUN;
     public static Item JAFFA_HELMET;
     public static Item JAFFA_CHESTPLATE;
     public static Item JAFFA_LEGGINGS;
@@ -48,6 +50,7 @@ public class InitItems {
         NAQUADAH_SPADE = new ToolSpade("naquadah_shovel",NAQUADAHTOOLMATERIAL);
         NAQUADAH_SWORD = new ToolSword("naquadah_sword",NAQUADAHTOOLMATERIAL);
         ZATNIKTEL = new Zatniktel();
+        STUFFGUN = new StuffGun();
         //Armor
         JAFFA_HELMET = new ArmorBase("jaffa_helmet",NAQUADAHARMORMATERIAL,1, EntityEquipmentSlot.HEAD);
         JAFFA_CHESTPLATE = new ArmorBase("jaffa_chestplate",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.CHEST);

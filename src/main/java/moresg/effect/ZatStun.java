@@ -1,4 +1,9 @@
 package moresg.effect;
 
-public class ZatStun {
+import net.minecraft.potion.PotionEffect;
+
+public class ZatStun extends PotionEffect {
+    public ZatStun(PotionEffect other) {
+        super(other);
+    }
 }

@@ -8,24 +8,23 @@ import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-
-public class ZatBeam extends EntityThrowable
+public class StuffBeam extends EntityThrowable
 {
-
-    public ZatBeam(World worldIn){
+    public StuffBeam(World worldIn){
         super(worldIn);
     }
 
-    public ZatBeam(World worldIn, EntityLivingBase throwerIn) {
+    public StuffBeam(World worldIn, EntityLivingBase throwerIn) {
         super(worldIn, throwerIn);
     }
-    public ZatBeam(World worldIn, double x, double y, double z)
+
+    public StuffBeam(World worldIn, double x, double y, double z)
     {
         super(worldIn, x, y, z);
     }
 
-    public static void registerFixesZatBeam(DataFixer fixer, String name){
-        registerFixesThrowable(fixer,"EntityZatBeam");
+    public static void registerFixesStuffBeam(DataFixer fixer, String name){
+        registerFixesThrowable(fixer,"EntityStuffBeam");
     }
 
     @Override
@@ -48,7 +47,7 @@ public class ZatBeam extends EntityThrowable
             int i = 100;
 
             result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
-            }
+        }
 
 
         if (!this.world.isRemote)
@@ -63,5 +62,3 @@ public class ZatBeam extends EntityThrowable
         return 0.0f;
     }
 }
-
-
