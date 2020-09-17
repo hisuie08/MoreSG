@@ -21,6 +21,7 @@ build
 eclipse
 run
 lib
+SGCraft
 # Files from Forge MDK
 forge*changelog.txt
 README.txt

@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.ForgeHooksClient;
 
+
 public class RenderZatBeam extends Render<ZatBeam> {
     private float scale;
     public RenderZatBeam(RenderManager manager, float scaleIn){
