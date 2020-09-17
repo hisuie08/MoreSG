@@ -1,5 +1,4 @@
 package moresg.client.renderer;
-
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
@@ -9,9 +8,15 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
+
 public class RenderProjectile extends Render {
     private final float scale;
     private ResourceLocation texture;
+
+    public RenderProjectile(RenderManager manager, float scale) {
+        super(manager);
+        this.scale = scale;
+    }
 
 
     public RenderProjectile(RenderManager manager, float scale,

@@ -38,7 +38,7 @@ public class Zatniktel extends Item {
 
         if (!worldIn.isRemote && isUsable(itemstack)) {
             ZatBeam beam = new ZatBeam(worldIn, playerIn);
-            beam.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0, 5.5F, 0.0F);
+            beam.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0, 5.0F, 0.0F);
             itemstack.damageItem(1,playerIn);
             worldIn.spawnEntity(beam);
         }

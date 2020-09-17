@@ -3,13 +3,9 @@ package moresg.entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.datafix.DataFixer;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class ZatBeam extends EntityThrowable
@@ -29,15 +25,11 @@ public class ZatBeam extends EntityThrowable
         registerFixesThrowable(fixer,"EntityZatBeam");
     }
 
-    @SideOnly(Side.CLIENT)
-    public void handleStatusUpdate(byte id)
-    {
-        if (id == 3)
-        {
-            for (int i = 0; i < 8; ++i)
-            {
-                this.world.spawnParticle(EnumParticleTypes.SNOWBALL, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
-            }
+    @Override
+    public void onUpdate() {
+        super.onUpdate();
+        if (!(this.ticksExisted < 5)){
+            this.setDead();
         }
     }
 
@@ -58,11 +50,10 @@ public class ZatBeam extends EntityThrowable
         }
     }
 
-    public AxisAlignedBB alignedBB = getEntityBoundingBox().grow(0.30000001192092896D);
-
-    public void setNoGravity() {
+    @Override
+    protected float getGravityVelocity() {
+        return 0.0f;
     }
-
 }
 
 
