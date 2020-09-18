@@ -1,14 +1,15 @@
 package moresg.particle;
 
-import net.minecraft.client.particle.Particle;
+
+import net.minecraft.client.particle.ParticleRedstone;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ZatParticle extends Particle{
-    protected ZatParticle(World worldIn, double posXIn, double posYIn, double posZIn) {
-        super(worldIn, posXIn, posYIn, posZIn);
-    }
 
-    public void setMaxAge() {
-        super.setMaxAge(10);
+@SideOnly(Side.CLIENT)
+public class ZatParticle extends ParticleRedstone{
+    public ZatParticle(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, float scale, float red, float green, float blue) {
+        super(worldIn, xCoordIn, yCoordIn, zCoordIn, scale, red, green, blue);
     }
 }
