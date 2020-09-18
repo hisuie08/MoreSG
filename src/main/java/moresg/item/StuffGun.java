@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class StuffGun extends Item{
     public StuffGun(){
         super();
-        String name = "stuff";
+        String name = "stuffgun";
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         this.setMaxDamage(64);

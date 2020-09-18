@@ -19,8 +19,10 @@ public class InitEntity{
 
     @Mod.EventBusSubscriber(modid = MoreSG.MODID)
     public static class InitEntityHandler{
+
         @SubscribeEvent
         public static void registerEntity(final RegistryEvent.Register<EntityEntry> event){
+
             final EntityEntry[] entries = {
                     createBuilder("ZatBeam")
                             .entity(ZatBeam.class)
@@ -29,7 +31,6 @@ public class InitEntity{
             };
 
             event.getRegistry().registerAll(entries);
-
         }
     }
 

@@ -1,5 +1,6 @@
 package moresg;
 
+import moresg.init.InitBlocks;
 import moresg.init.InitItems;
 import moresg.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
@@ -43,6 +44,7 @@ public class MoreSG
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        InitBlocks.init();
         InitItems.init();
         proxy.preInit(event);
     }

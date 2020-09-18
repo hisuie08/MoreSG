@@ -15,7 +15,7 @@ public class ModRenderer {
                     @Override
                     public Render<ZatBeam> createRenderFor(RenderManager manager) {
                         return new RenderProjectile(
-                                manager,0.5F,new ResourceLocation(MoreSG.MODID,"textures/entity/zatbeam.png")
+                                manager,0.3F,new ResourceLocation(MoreSG.MODID,"textures/entity/zatbeam.png")
                         );
                     }
                 }

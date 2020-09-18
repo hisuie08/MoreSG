@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "${modid}",
+    "name": "MoreSG",
+    "description": "Stargates items and more things.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/hisuie08/MoreSG",
+    "updateUrl": "",
+    "authors": ["NashiroAoi"],
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [],
+    "requiredMods": ["forge@14.23.5.2854"]
+  }
+]

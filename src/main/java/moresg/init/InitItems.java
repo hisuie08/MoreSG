@@ -24,6 +24,7 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitItems {
     public static List<Item> registeredItems = new ArrayList<Item>();
+    public static Item BlockTitaniumOre;
     public static Item NAQUADAH_AXE;
     public static Item NAQUADAH_HOE;
     public static Item NAQUADAH_PICKAXE;
@@ -43,6 +44,8 @@ public class InitItems {
             new int[] {6, 15, 21, 9}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F);
 
     public static void init() {
+        //Blocks
+
         //Tools
         NAQUADAH_AXE = new ToolAxe("naquadah_axe", NAQUADAHTOOLMATERIAL);
         NAQUADAH_HOE = new ToolHoe("naquadah_hoe",NAQUADAHTOOLMATERIAL);
