@@ -2,7 +2,8 @@ package moresg.init;
 
 import moresg.MoreSG;
 import moresg.item.ArmorBase;
-import moresg.item.StuffGun;
+import moresg.item.ItemBase;
+import moresg.item.StaffGun;
 import moresg.item.Zatniktel;
 import moresg.item.tool.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -19,23 +20,26 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitItems {
-    public static List<Item> registeredItems = new ArrayList<Item>();
-    public static Item BlockTitaniumOre;
-    public static Item NAQUADAH_AXE;
-    public static Item NAQUADAH_HOE;
-    public static Item NAQUADAH_PICKAXE;
-    public static Item NAQUADAH_SWORD;
-    public static Item NAQUADAH_SPADE;
-    public static Item ZATNIKTEL;
-    public static Item STUFFGUN;
-    public static Item JAFFA_HELMET;
-    public static Item JAFFA_CHESTPLATE;
-    public static Item JAFFA_LEGGINGS;
-    public static Item JAFFA_BOOTS;
+    public static List<Item> registeredItems = new ArrayList<>();
+    public static Item Compact_Naquadah_Circuit;
+    public static Item Jaffa_Helmet;
+    public static Item Jaffa_Chestplate;
+    public static Item Jaffa_Leggings;
+    public static Item Jaffa_Boots;
+    //public static Item Liquid_Naquadah_Bottle;
+    public static Item Naquadah_Axe;
+    public static Item Naquadah_Energy_Barrel;
+    public static Item Naquadah_Hoe;
+    public static Item Naquadah_Pickaxe;
+    public static Item Naquadah_Sword;
+    public static Item Naquadah_Spade;
+    public static Item Staff_Gun;
+    public static Item Zatniktel;
 
     public static final Item.ToolMaterial NAQUADAHTOOLMATERIAL = EnumHelper.addToolMaterial(
             "ingotNaquadahAlloy",5,100000,20.0F,5.0F,1);
@@ -47,18 +51,22 @@ public class InitItems {
         //Blocks
 
         //Tools
-        NAQUADAH_AXE = new ToolAxe("naquadah_axe", NAQUADAHTOOLMATERIAL);
-        NAQUADAH_HOE = new ToolHoe("naquadah_hoe",NAQUADAHTOOLMATERIAL);
-        NAQUADAH_PICKAXE = new ToolPickaxe("naquadah_pickaxe",NAQUADAHTOOLMATERIAL);
-        NAQUADAH_SPADE = new ToolSpade("naquadah_shovel",NAQUADAHTOOLMATERIAL);
-        NAQUADAH_SWORD = new ToolSword("naquadah_sword",NAQUADAHTOOLMATERIAL);
-        ZATNIKTEL = new Zatniktel();
-        STUFFGUN = new StuffGun();
+        Naquadah_Axe = new ToolAxe("naquadah_axe", NAQUADAHTOOLMATERIAL);
+        Naquadah_Hoe = new ToolHoe("naquadah_hoe",NAQUADAHTOOLMATERIAL);
+        Naquadah_Pickaxe = new ToolPickaxe("naquadah_pickaxe",NAQUADAHTOOLMATERIAL);
+        Naquadah_Spade = new ToolSpade("naquadah_shovel",NAQUADAHTOOLMATERIAL);
+        Naquadah_Sword = new ToolSword("naquadah_sword",NAQUADAHTOOLMATERIAL);
+        Zatniktel = new Zatniktel();
+        Staff_Gun = new StaffGun();
         //Armor
-        JAFFA_HELMET = new ArmorBase("jaffa_helmet",NAQUADAHARMORMATERIAL,1, EntityEquipmentSlot.HEAD);
-        JAFFA_CHESTPLATE = new ArmorBase("jaffa_chestplate",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.CHEST);
-        JAFFA_LEGGINGS = new ArmorBase("jaffa_leggings",NAQUADAHARMORMATERIAL,2,EntityEquipmentSlot.LEGS);
-        JAFFA_BOOTS = new ArmorBase("jaffa_boots",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.FEET);
+        Jaffa_Helmet = new ArmorBase("jaffa_helmet",NAQUADAHARMORMATERIAL,1, EntityEquipmentSlot.HEAD);
+        Jaffa_Chestplate = new ArmorBase("jaffa_chestplate",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.CHEST);
+        Jaffa_Leggings = new ArmorBase("jaffa_leggings",NAQUADAHARMORMATERIAL,2,EntityEquipmentSlot.LEGS);
+        Jaffa_Boots = new ArmorBase("jaffa_boots",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.FEET);
+        //Items
+        Compact_Naquadah_Circuit = new ItemBase("compact_naquadah_circuit");
+        //Liquid_Naquadah_Bottle = new ItemBase("liquid_naquadah_bottle");
+        Naquadah_Energy_Barrel = new ItemBase("naquadah_energy_barrel");
 
 
     }
@@ -74,8 +82,6 @@ public class InitItems {
     }
 
     private static void registerRenderer(Item item){
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( item.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
     }
-
-
 }

@@ -1,9 +1,7 @@
 package moresg.init;
 
 import moresg.MoreSG;
-import moresg.block.TitaniumOre;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -14,14 +12,14 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitBlocks {
-    public static List<Block> registeredBlocks = new ArrayList<Block>();
-    public static Block TitaniumOre;
+    public static List<Block> registeredBlocks = new ArrayList<>();
 
     public static void init(){
-        TitaniumOre = new TitaniumOre("titanium_ore", Material.ROCK);
+
     }
 
     @SubscribeEvent
@@ -35,7 +33,7 @@ public class InitBlocks {
     }
     private static void registerRenderer(Block block){
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(
-                block.getRegistryName(), "inventory"));
+                Objects.requireNonNull(block.getRegistryName()), "inventory"));
     }
 
 }

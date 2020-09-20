@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
 @GameRegistry.ObjectHolder(MoreSG.MODID)
 public class InitEntity{
     public static EntityEntry ZAT_BEAM;
@@ -22,14 +21,12 @@ public class InitEntity{
 
         @SubscribeEvent
         public static void registerEntity(final RegistryEvent.Register<EntityEntry> event){
-
             final EntityEntry[] entries = {
                     createBuilder("ZatBeam")
                             .entity(ZatBeam.class)
                             .tracker(64, 1, false)
                             .build(),
             };
-
             event.getRegistry().registerAll(entries);
         }
     }
@@ -39,5 +36,4 @@ public class InitEntity{
         final ResourceLocation registryName = new ResourceLocation(MoreSG.MODID, name);
         return builder.id(registryName, entityID++).name(registryName.toString());
     }
-
 }

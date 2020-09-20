@@ -1,0 +1,28 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": ["RLR","NDN","QQQ"],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "L": {
+            "item": "minecraft:lever"
+        },
+        "N": {
+            "type": "forge:ore_dict",
+            "ore": "ingotNaquadahAlloy"
+        },
+        "D": {
+            "type": "forge:ore_dict",
+            "ore": "gemDiamond"
+        },
+        "Q":{
+            "type": "forge:ore_dict",
+            "ore": "gemQuartz"
+        }
+    },
+    "result": {
+        "item": "moresg:compact_naquadah_circuit",
+        "count": 1
+    }
+}

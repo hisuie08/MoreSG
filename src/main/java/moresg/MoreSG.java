@@ -13,9 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-
-
-@Mod(modid = MoreSG.MODID, name = MoreSG.NAME, version = MoreSG.VERSION)
+@Mod(modid = MoreSG.MODID, name = MoreSG.NAME, version = MoreSG.VERSION, dependencies = "after:sgcraft")
 public class MoreSG
 {
     public static final String MODID = "moresg";
@@ -29,7 +27,7 @@ public class MoreSG
     public static final CreativeTabs creativeTabs = new CreativeTabs("moresg:moresg") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(InitItems.NAQUADAH_AXE);
+            return new ItemStack(InitItems.Naquadah_Axe);
         }
     };
 

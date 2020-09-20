@@ -1,7 +1,7 @@
 package moresg.item;
 
 import moresg.MoreSG;
-import moresg.entity.StuffBeam;
+import moresg.entity.StaffBeam;
 import moresg.init.InitItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -12,10 +12,10 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class StuffGun extends Item{
-    public StuffGun(){
+public class StaffGun extends Item{
+    public StaffGun(){
         super();
-        String name = "stuffgun";
+        String name = "staffgun";
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         this.setMaxDamage(64);
@@ -38,7 +38,7 @@ public class StuffGun extends Item{
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 
         if (!worldIn.isRemote && isUsable(itemstack)) {
-            StuffBeam beam = new StuffBeam(worldIn, playerIn);
+            StaffBeam beam = new StaffBeam(worldIn, playerIn);
             beam.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0, 1.5F, 0.0F);
             itemstack.damageItem(1,playerIn);
             worldIn.spawnEntity(beam);

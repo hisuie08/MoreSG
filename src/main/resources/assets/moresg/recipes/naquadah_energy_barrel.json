@@ -1,0 +1,24 @@
+{
+    "type": "forge:ore_shaped",
+    "pattern": ["QNR", "DNN","QNR"],
+    "key": {
+        "N": {
+            "type": "forge:ore_dict",
+            "ore": "naquadah"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "Q":{
+            "type": "forge:ore_dict",
+            "ore": "gemQuartz"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        }
+    },
+    "result": {
+        "item": "moresg:naquadah_energy_barrel",
+        "count": 1
+    }
+}

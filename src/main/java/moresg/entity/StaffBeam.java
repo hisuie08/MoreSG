@@ -8,17 +8,17 @@ import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class StuffBeam extends EntityThrowable
+public class StaffBeam extends EntityThrowable
 {
-    public StuffBeam(World worldIn){
+    public StaffBeam(World worldIn){
         super(worldIn);
     }
 
-    public StuffBeam(World worldIn, EntityLivingBase throwerIn) {
+    public StaffBeam(World worldIn, EntityLivingBase throwerIn) {
         super(worldIn, throwerIn);
     }
 
-    public StuffBeam(World worldIn, double x, double y, double z)
+    public StaffBeam(World worldIn, double x, double y, double z)
     {
         super(worldIn, x, y, z);
     }
