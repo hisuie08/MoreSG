@@ -1,10 +1,7 @@
 package moresg.init;
 
 import moresg.MoreSG;
-import moresg.item.ArmorBase;
-import moresg.item.ItemBase;
-import moresg.item.StaffGun;
-import moresg.item.Zatniktel;
+import moresg.item.*;
 import moresg.item.tool.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
@@ -38,6 +35,7 @@ public class InitItems {
     public static Item Naquadah_Pickaxe;
     public static Item Naquadah_Sword;
     public static Item Naquadah_Spade;
+    public static Item Personal_Shield;
     public static Item Staff_Gun;
     public static Item Zatniktel;
 
@@ -63,6 +61,7 @@ public class InitItems {
         Jaffa_Chestplate = new ArmorBase("jaffa_chestplate",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.CHEST);
         Jaffa_Leggings = new ArmorBase("jaffa_leggings",NAQUADAHARMORMATERIAL,2,EntityEquipmentSlot.LEGS);
         Jaffa_Boots = new ArmorBase("jaffa_boots",NAQUADAHARMORMATERIAL,1,EntityEquipmentSlot.FEET);
+        Personal_Shield = new PersonalShield();
         //Items
         Compact_Naquadah_Circuit = new ItemBase("compact_naquadah_circuit");
         //Liquid_Naquadah_Bottle = new ItemBase("liquid_naquadah_bottle");
