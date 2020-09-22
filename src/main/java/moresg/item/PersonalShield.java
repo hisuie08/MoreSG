@@ -1,5 +1,4 @@
 package moresg.item;
-
 import moresg.MoreSG;
 import moresg.init.InitItems;
 import net.minecraft.init.SoundEvents;
@@ -7,8 +6,6 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.EventBus;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber
 public class PersonalShield extends ItemArmor {

@@ -1,8 +1,11 @@
 package moresg.entity;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EntityDamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.math.RayTraceResult;
@@ -24,6 +27,8 @@ public class ZatBeam extends EntityThrowable
         super(worldIn, x, y, z);
     }
 
+    public static DamageSource zatshoot;
+
     public static void registerFixesZatBeam(DataFixer fixer, String name){
         registerFixesThrowable(fixer,"EntityZatBeam");
     }
@@ -41,16 +46,20 @@ public class ZatBeam extends EntityThrowable
 
     }
 
-
     protected void onImpact(RayTraceResult result)
     {
         if (result.entityHit != null)
         {
-            int i = 100;
-
-            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
+            int i = 3;
+            zatshoot = new EntityDamageSource("moresg:zatshoot",this.getThrower());
+            result.entityHit.attackEntityFrom(zatshoot, (float)i);
+            if(result.entityHit instanceof EntityCreeper) {
+                EntityCreeper target = ((EntityCreeper) result.entityHit);
+                EntityLightningBolt fakelight = new EntityLightningBolt(world,target.posX,target.posY,target.posZ,true);
+                fakelight.setFire(0);
+                target.onStruckByLightning(fakelight);
             }
-
+            }
 
         if (!this.world.isRemote)
         {
@@ -63,6 +72,7 @@ public class ZatBeam extends EntityThrowable
     protected float getGravityVelocity() {
         return 0.0f;
     }
+
 }
 
 
