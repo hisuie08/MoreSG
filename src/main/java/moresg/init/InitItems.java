@@ -28,6 +28,7 @@ public class InitItems {
     public static Item Jaffa_Chestplate;
     public static Item Jaffa_Leggings;
     public static Item Jaffa_Boots;
+    public static Item LiquidNaquadahCell;
     public static Item Naquadah_Axe;
     public static Item Naquadah_Energy_Barrel;
     public static Item Naquadah_Hoe;
@@ -63,6 +64,7 @@ public class InitItems {
         Personal_Shield = new PersonalShield();
         //Items
         Compact_Naquadah_Circuit = new ItemBase("compact_naquadah_circuit");
+        LiquidNaquadahCell = new LiquidNaquadahCell("liquid_naquadah_cell");
         Naquadah_Energy_Barrel = new ItemBase("naquadah_energy_barrel");
 
 
