@@ -17,9 +17,9 @@ import java.util.Objects;
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitBlocks {
     public static List<Block> registeredBlocks = new ArrayList<>();
+    public static Block LiquidNaquadahBlock;
 
     public static void init(){
-
     }
 
     @SubscribeEvent
