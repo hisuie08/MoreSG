@@ -1,7 +1,9 @@
 package moresg.init;
 
 import moresg.MoreSG;
+import moresg.block.NaquadahGenerator;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -17,9 +19,10 @@ import java.util.Objects;
 @Mod.EventBusSubscriber(modid = MoreSG.MODID)
 public class InitBlocks {
     public static List<Block> registeredBlocks = new ArrayList<>();
-    public static Block LiquidNaquadahBlock;
+    public static Block NaquadahGenerator;
 
     public static void init(){
+        NaquadahGenerator = new NaquadahGenerator("naquadah_generator",Material.ROCK);
     }
 
     @SubscribeEvent
